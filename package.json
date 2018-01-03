@@ -13,7 +13,7 @@
     "babel-node": "babel-node",
     "build": "set NODE_ENV=production && babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "eslint"
+    "eslint": "eslint src/*/*.js"
   },
   "repository": {
     "type": "git",
@@ -28,12 +28,14 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "*",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-eslint": "*",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "^21.5.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.7"
