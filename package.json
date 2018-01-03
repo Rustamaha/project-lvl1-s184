@@ -1,6 +1,6 @@
 {
   "name": "brain-games-khudaibergenov",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
