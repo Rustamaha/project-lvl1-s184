@@ -17,3 +17,4 @@ extends:
 
 rules:
   no-console: off
+  linebreak-style: 0
