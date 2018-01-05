@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import user from '..';
+import user from '../games/greetingUser';
 
 user();
