@@ -2,8 +2,8 @@ import generatorNum from '../generatorNum';
 import game from '..';
 
 export default () => {
+  const description = 'What number is missing in this progression?';
   const gameParam = () => {
-    const description = 'What number is missing in this progression?';
     const arrOfNum = generatorNum(2, 9);
     const firstNum = generatorNum(10, 90);
     const progressNum = [];
@@ -18,7 +18,7 @@ export default () => {
     const ourProgression = progression(progressNum, firstNum, arrOfNum, 10);
     const correctAnswer = ourProgression.splice(arrOfNum, 1, '..');
     const question = ourProgression.join(' ');
-    return { description, question, correctAnswer };
+    return { question, correctAnswer };
   };
-  return game(gameParam);
+  return game(gameParam, description);
 };

@@ -2,8 +2,8 @@ import generatorNum from '../generatorNum';
 import game from '..';
 
 export default () => {
-  const gameParam = () => {
-    const description = 'Balance the given number.';
+  const description = 'Balance the given number.';
+  const questionAnswer = () => {
     const givenNum = () => generatorNum(100, 10000);
     const notBalanceNum = givenNum();
     const question = `${notBalanceNum}`;
@@ -32,7 +32,7 @@ export default () => {
     };
 
     const correctAnswer = balanceNum(notBalanceNum);
-    return { description, question, correctAnswer };
+    return { question, correctAnswer };
   };
-  return game(gameParam);
+  return game(questionAnswer, description);
 };

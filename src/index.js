@@ -1,14 +1,13 @@
 import readlineSync from 'readline-sync';
 
-export default (gameParam) => {
-  const { description } = gameParam();
+export default (questionAnswer, description) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   const maxQuestions = 3;
   for (let step = 1; step <= maxQuestions; step +=1) {
-    const { question, correctAnswer } =gameParam();
+    const { question, correctAnswer } = questionAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (`${correctAnswer}` === userAnswer) {
