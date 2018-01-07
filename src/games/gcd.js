@@ -2,8 +2,8 @@ import generatorNum from '../generatorNum';
 import game from '..';
 
 export default () => {
-  const gameParam = () => {
-    const description = 'Find the greatest common divisor of given numbers.';
+  const description = 'Find the greatest common divisor of given numbers.';
+  const questionAnswer = () => {
     const genNum1 = generatorNum(1, 100);
     const genNum2 = generatorNum(1, 100);
     const question = `${genNum1} ${genNum2}`;
@@ -18,7 +18,7 @@ export default () => {
     };
     const answer = gcd(genNum1, genNum2);
     const correctAnswer = `${answer}`;
-    return { description, question, correctAnswer };
+    return { question, correctAnswer };
   };
-  return game(gameParam);
+  return game(questionAnswer, description);
 };
