@@ -5,7 +5,7 @@ export default () => {
   const gameParam = () => {
     const operators = ['+', '-', '*'];
     const getRandomOperator = (oper) => {
-      const operand = operators[Math.ceil(Math.random() * 2)];
+      const operand = oper[Math.ceil(Math.random() * 2)];
       const random1 = generatorNum(1, 100);
       const random2 = generatorNum(1, 100);
       return `${random1} ${operand} ${random2}`;
@@ -24,7 +24,7 @@ export default () => {
       if (operand === '-') {
         return numA - numB;
       }
-    return numA * numB;
+      return numA * numB;
     };
     const correctAnswer = sumExp(question);
     return { description, question, correctAnswer };
