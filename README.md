@@ -2,7 +2,7 @@
 
     npm install -g brain-games-khudaibergenov
 
-Menu:
+***Menu:***
     
     brain-games
 
